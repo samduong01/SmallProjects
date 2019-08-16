@@ -1,0 +1,3 @@
+problems that involve swapping - often you have to find the difference when its sorted and count how many or the index of that
+combo problems - brute force - try every combo
+simulation problems - brute force simulate

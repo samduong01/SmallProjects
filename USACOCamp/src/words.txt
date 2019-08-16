@@ -1,0 +1,253 @@
+acres
+adult
+advice
+acne
+arrangement
+attempt
+August
+Autumn
+border
+breeze
+brick
+calm
+canal
+Casey
+cast
+chose
+claws
+coach
+constantly
+contrast
+cookies
+customs
+damage
+Danny
+deeply
+depth
+discussion
+doll
+donkey
+Egypt
+Ellen
+essential
+exchange
+exist
+explanation
+facing
+film
+finest
+fireplace
+floating
+folks
+fort
+garage
+grabbed
+grandmother
+habit
+happily
+Harry
+heading
+hunter
+Illinois
+image
+independent
+instant
+January
+kids
+label
+Lee
+lungs
+manufacturing
+Martin
+mathematics
+melted
+memory
+mill
+mission
+monkey
+Mount
+mysterious
+neighborhood
+Norway
+nut
+occasionally
+official
+ourselves
+palace
+Pennsylvania
+Philadelphia
+plates
+poetry
+policeman
+positive
+possibly
+practical
+pride
+promised
+recall
+relationship
+remarkable
+require
+rhyme
+rocky
+rubbed
+rush
+sale
+satellites
+satisfied
+scared
+selection
+shake
+shaking
+shallow
+shout
+silly
+simplest
+slight
+slip
+slope
+soap
+solar
+species
+spin
+stiff
+swung
+tales
+thumb
+tobacco
+toy
+trap
+treated
+tune
+University
+vapor
+vessels
+wealth
+wolf
+zoo
+nathan
+sam\
+
+
+
+
+
+
+
+
+5
+1 3 4 7 11
+int minValue = Math.min(cows.get(i)-cows.get(i-1),cows.get(i+1)-cows.get(i));
+            if(cows.get(i)-cows.get(i-1)>cows.get(i+1)-cows.get(i)){
+                minValue+=cows.get(i);
+            }else{
+                minValue=cows.get(i)-minValue;
+            }
+
+            int minValue2 = Math.min(cows.get(cows.indexOf(minValue))-cows.get(cows.indexOf(minValue)-1),cows.get(cows.indexOf(minValue)+1)-cows.get(cows.indexOf(minValue)));
+            System.out.println(minValue2);
+            if(cows.get(cows.indexOf(minValue))-cows.get(cows.indexOf(minValue)-1)>cows.get(cows.indexOf(minValue)+1)-cows.get(cows.indexOf(minValue))){
+                minValue2+=cows.get(cows.indexOf(minValue));
+
+                System.out.println("here");
+            }else{
+                minValue2=cows.get(cows.indexOf(minValue))-minValue2;
+
+
+            }
+            if(cows.indexOf(minValue2)==i){
+
+            }else{
+                found.add(minValue2);
+
+                count++;
+            }
+
+
+5
+2 1
+4 5
+7 8
+20 10
+1 12
+
+
+
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Scanner;
+import java.util.Vector;
+
+/**
+ * Created by sam on 6/26/19.
+ */
+public class Trapped {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        Vector<HayBaleTrap> hayBales = new Vector<>();
+
+        for(int i = 0;i<n;i++){
+            hayBales.add(new HayBaleTrap(sc.nextInt(),sc.nextInt()));
+        }
+
+        Collections.sort(hayBales, new Comparator<HayBaleTrap>() {
+            @Override
+            public int compare(HayBaleTrap o1, HayBaleTrap o2) {
+                return o1.pos-o2.pos;
+            }
+        });
+        for(int i = 0;i<n;i++){
+            System.out.print(hayBales.get(i).height + " ");
+        }
+        System.out.println();
+        for(int i = 0;i<n;i++){
+            System.out.print(hayBales.get(i).pos + " ");
+        }
+        int count = 0;
+        int min;
+        Vector<Integer> cords = new Vector<>();
+        int minHeight;
+        for(int i = 0;i<hayBales.size();i++){
+            min = hayBales.get(i).pos;
+
+            for(int j = i+1;j<hayBales.size();j++){
+
+                minHeight = Math.min(hayBales.get(j).height,hayBales.get(i).height);
+
+                if(hayBales.get(j).pos-min-1<=minHeight){
+                    count+= hayBales.get(j).pos-min;
+                    cords.add(hayBales.get(j).pos);
+                    cords.add(min);
+                    i= j-1;
+                    break;
+                }
+            }
+        }
+
+        System.out.println(cords);
+        System.out.println(count);
+    }
+}
+
+class HayBaleTrap{
+    int pos;
+    int height;
+    HayBaleTrap(int height, int pos){
+        this.pos = pos;
+        this.height = height;
+    }
+}
+
+
+
+..........
+..........
+.B.RL.....
+..........
+..........
+..........
+..........
+..........
+..........
+..........

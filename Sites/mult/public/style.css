@@ -1,0 +1,7 @@
+td, th{
+    border: 2px solid rgb(72,112,85);
+    padding: 0.01rem;
+    font-family: Verdana;
+    width: 60px;
+    background-color: rgb(255,248,235);
+}
