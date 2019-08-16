@@ -1,0 +1,23 @@
+<company>
+    <staff id="1001">
+        <firstname>yong</firstname>
+        <lastname>mook kim</lastname>
+        <nickname>crushing it</nickname>
+        <salary>109000</salary>
+    </staff>
+
+    <staff id="2001">
+        <firstname>low</firstname>
+        <lastname>yin fong</lastname>
+        <nickname>fong fong</nickname>
+        <salary>200000</salary>
+    </staff>
+
+    <staff id = "2002">
+        <firstname> fred</firstname>
+        <lastname>your boi</lastname>
+        <nickname>oof</nickname>
+        <salary>-2000000</salary>
+    </staff>
+
+</company>

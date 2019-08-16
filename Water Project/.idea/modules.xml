@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Water Project.iml" filepath="$PROJECT_DIR$/Water Project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FTCNavGUI/FTCNavGUI.iml" filepath="$PROJECT_DIR$/FTCNavGUI/FTCNavGUI.iml" />
     </modules>
   </component>
 </project>

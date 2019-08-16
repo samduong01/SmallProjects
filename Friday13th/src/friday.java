@@ -6,13 +6,12 @@ TASK: friday
 import java.io.*;
 import java.util.*;
 
-class friday {
-    public static void main (String [] args) throws IOException {
-        BufferedReader f = new BufferedReader(new FileReader("friday.in"));
-        PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("friday.out")));
+public class Friday {
+    public static void main (String [] args) {
+        Scanner sc = new Scanner(System.in);
         HashMap<Integer,Integer> days = new HashMap<>();
         int currentYear = 1900;
-        int yearRange = Integer.parseInt(f.readLine());
+        int yearRange = sc.nextInt();
         int fridayDay = 1;
         for(int i = 0; i<7;i++){
             days.put(i,0);
@@ -44,9 +43,7 @@ class friday {
             }
             currentYear++;
         }
-        out.print(days.get(0) + " " + days.get(1) + " " + days.get(2) + " " + days.get(3) + " " + days.get(4) + " " + days.get(5) + " " + days.get(6));
-        out.println("");
-        out.close();
+        System.out.println(days.get(0) + " " + days.get(1) + " " + days.get(2) + " " + days.get(3) + " " + days.get(4) + " " + days.get(5) + " " + days.get(5) + " ")
     }
 }
 

@@ -4,9 +4,7 @@
 import java.util.Scanner;
 import java.util.Random;
 public class Main {
-    public void user1GoesFirst(){
 
-    }
     public static void main(String[] args) {
         double coin = Math.random();
         //boolean isHeads;

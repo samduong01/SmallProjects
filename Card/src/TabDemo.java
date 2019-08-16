@@ -23,6 +23,6 @@ public class TabDemo {
         card1.add(new JButton("Button 2"));
         card1.add(new JButton("Button 3"));
         JPanel card2 = new JPanel();
-        card2.add(new JTextField)
+        card2.add(new JTextField);
     }
 }
