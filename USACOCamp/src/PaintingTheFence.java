@@ -1,4 +1,3 @@
-import javafx.geometry.Pos;
 
 import java.lang.reflect.Array;
 import java.util.*;
@@ -61,10 +60,6 @@ public class PaintingTheFence {
                 }
             }
         });
-
-
-
-
 
         int prevLayers = 0;
         int currLayers = 0;

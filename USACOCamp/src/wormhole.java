@@ -20,83 +20,110 @@ class wormhole {
         PrintWriter out;
         boolean debug = true;
         if(debug) {
-            sc = new Scanner(new FileReader("/Users/sam/Projects/USACOCamp/src/wormhole.in"));
-            out = new PrintWriter(new FileWriter("/Users/sam/Projects/USACOCamp/src/wormhole.out"));
+            sc = new Scanner(new FileReader("/Users/samduong/Projects/MakerProjects/USACOCamp/src/wormhole.in"));
+            out = new PrintWriter(new FileWriter("/Users/samduong/Projects/MakerProjects/USACOCamp/src/wormhole.out"));
         }else{
             sc = new Scanner(new FileReader("wormhole.in"));
             out = new PrintWriter(new FileWriter("wormhole.out"));
         }
         int n = sc.nextInt();
         Vector<Point> points = new Vector<>();
-        Vector<Line> slopes = new Vector<>();
         for(int i = 0;i<n;i++){
-            points.add(new Point(sc.nextInt(),sc.nextInt()));
+            points.add(new Point(sc.nextInt(),sc.nextInt(), i));
         }
-        for(int i = 0;i<n;i++){
-            for(int j = i+1;j<n;j++){
-                slopes.add(new Line(points.get(i).x, points.get(j).x,points.get(i).y,points.get(j).y,points.get(i).y-points.get(j).y/points.get(i).x-points.get(j).x, (Character.toString((char)(i+97)) + Character.toString((char)(j+97)))));
+
+        Vector<Point[]> pairPoints = new Vector<>();
+
+        for(int i = 0;i < n;i++){
+            for(int j = 0;j<n;j++){
+                if(i==j){
+                    continue;
+                }
+                Point[] pointPair = {points.get(i),points.get(j)};
+                pairPoints.add(pointPair);
             }
         }
         int count = 0;
-        for(int i = 0;i<n;i++){
-            for(int j = i+1;j<n;j++){
+        Vector<String> finalSet = new Vector<>();
+        for(int i = 0;i<pairPoints.size();i++){
+            for(int k = 0;k<n;k++){
+                for(int r = 0;r<n;r++) {
+                    if(r==k){
+                        continue;
+                    }
+//                    count++;
+                    if(pairPoints.get(i)[0].x-points.get(k).x > 1 && points.get(r).x-pairPoints.get(i)[1].x>1 && points.get(k).x < pairPoints.get(i)[0].x && points.get(r).x > pairPoints.get(i)[1].x && points.get(k).y == pairPoints.get(i)[0].y && points.get(r).y == pairPoints.get(i)[1].y){
+                        String[] pairArray = {Character.toString((char)(pairPoints.get(i)[0].number+65)), Character.toString((char)(pairPoints.get(i)[1].number+65))};
+//                        Arrays.sort(pairArray);
+                        String[] pairArray2 = {Character.toString((char)(k+65)), Character.toString((char)(r+65))};
+                        Arrays.sort(pairArray2);
+                        String pair = pairArray[0] + pairArray[1];
+                        String setPair = pairArray2[0]+pairArray2[1];
+                        if(!finalSet.contains(pair) && !pair.equals(setPair)){
+                            count++;
 
-                if((slopes.get(i).y1 ==slopes.get(j).y1 && slopes.get(i).y2 ==slopes.get(j).y2) && (slopes.get(i).x2>slopes.get(j).x2 && slopes.get(i).x1<slopes.get(j).x1) || (slopes.get(i).x2<slopes.get(j).x2 && slopes.get(i).x1>slopes.get(j).x1)){
-                    count++;
-                    System.out.println("line 1 x1 " + slopes.get(i).x1);
-                    System.out.println("line 1 y1 " + slopes.get(i).y1);
-                    System.out.println("line 1 x2 " + slopes.get(i).x2);
-                    System.out.println("line 1 y2 " + slopes.get(i).y2);
-
-                    System.out.println("line 2 x1 " + slopes.get(j).x1);
-                    System.out.println("line 2 y1 " + slopes.get(j).y1);
-                    System.out.println("line 2 x2 " + slopes.get(j).x2);
-                    System.out.println("line 2 y2 " + slopes.get(j).y2);
-                    System.out.println("NEWWW___________");
+                            System.out.println("Pair " + pair + " with " + setPair);
+                            finalSet.add(pair);
+                        }
+//                        if(!finalSet.contains(setPair) && !pair.equals(setPair)){
+//                            count++;
+//
+//                            System.out.println("Pair " + pair + " with " + setPair);
+//                            finalSet.add(setPair);
+//                        }
+                    }
                 }
             }
         }
-        System.out.println(count);
-        HashSet<Integer[]> indexes = new HashSet<>();
+
         for(int i = 0;i<n;i++){
             for(int j = i+1;j<n;j++){
-                if(points.get(i).y == points.get(j).y && i!=j){
-                    Integer[] s = {i,j};
-                    Arrays.sort(s);
-                    indexes.add(s);
-                    System.out.println("i: " + i);
-                    System.out.println("j: " + j);
+                if(points.get(i).y == points.get(j).y) {
+                    String[] pairArray = {Character.toString((char) (i + 65)), Character.toString((char) (j + 65))};
+//                    Arrays.sort(pairArray);
+                    String pair = pairArray[0] + pairArray[1];
+                    if(!finalSet.contains(pair)){
+                        count++;
+
+                        System.out.println("Pair " + pair );
+                        finalSet.add(pair);
+                    }
                 }
             }
         }
 
-        out.println(indexes.size()+count);
+        System.out.println("count " + count);
+        out.println(finalSet.size());
         out.close();
-    }
+        int maxRow = Integer.MIN_VALUE;
+        for(int i = 0; i<points.size();i++){
+            if(points.get(i).y>maxRow){
+                maxRow = (int)points.get(i).y;
+            }
+        }
+        System.out.println(maxRow);
+        Vector<Point>[] list = new Vector<Int>[maxRow+1];
+//        Arrays.fill(new Vector<Point>);
 
-}
-class Line{
-    double x1;
-    double x2;
-    double y1;
-    double y2;
-    double slope;
-    String id;
-    Line(double x1, double x2, double y1, double y2, double slope, String id){
-        this.x1 = x1;
-        this.x2 = x2;
-        this.y1 = y1;
-        this.y2 = y2;
-        this.slope = slope;
-        this.id = id;
+        for(int i = 0;i<points.size();i++){
+            list[(int)points.get(i).y].add(points.get(i));
+        }
+
+        for(int i = 0;i<list.length;i++){
+            for(int j = 0;j<list[i].size();j++){
+                System.out.println(list[i].get(j).number);
+            }
+        }
     }
 }
 
 class Point{
+    int number;
     double x;
     double y;
-    public Point(double x, double y){
+    public Point(double x, double y, int number){
         this.x = x;
         this.y = y;
+        this.number = number;
     }
 }

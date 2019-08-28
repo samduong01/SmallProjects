@@ -17,7 +17,7 @@ public class Main {
         choice = Character.toUpperCase(sc.next().charAt(0));
 
         if(choice == 'Y'){
-            System.out.println("Enter X cordinate [space] Y cordinate");
+            System.out.println("Enter X coordinate [space] Y coordinate");
 
             //initializes c using the constructor that takes in the users x and y
             c = new CowFrame(sc.nextInt(),sc.nextInt());
