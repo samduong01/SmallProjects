@@ -2,14 +2,135 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6dfc91e7-fcb9-48b9-8681-58a06c1f665e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PropCont/src/OldLogicalSentences/TestLogical.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../USACOCamp/src/skidesign.in" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../USACOCamp/src/skidesign.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../USACOCamp/src/skidesign.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CowProblem/CowFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CowProblem/CowFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CowProblem/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CowProblem/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CowProblem/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CowProblem/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fusion 360 CAM/Posts/stepcraft uccnc (2).cps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/OHS/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/OHS/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/OHS/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/OHS/OHS.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/OHS/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/OHS/src/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/PropCont/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/PropCont/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/PropCont/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/PropCont/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/PropCont/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/PropCont/PropCont.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/PropCont/out/production/PropCont/Logic.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/PropCont/out/production/PropCont/LogicalSentence.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/PropCont/out/production/PropCont/LogicalSentence.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/PropCont/out/production/PropCont/LogicalSentenceWorkingCheck.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/PropCont/out/production/PropCont/META-INF/PropCont.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/PropCont/out/production/PropCont/OLDREADME/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/PropCont/out/production/PropCont/PropositionConstant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/PropCont/out/production/PropCont/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/PropCont/out/production/PropCont/TestLogicalSentence.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/PropCont/out/production/PropCont/TestPropositionConstant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/PropCont/out/production/PropCont/TruthAssignment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/PropCont/src/Logic.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/PropCont/src/LogicalSentence.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/PropCont/src/LogicalSentences/LogicalSentence.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/PropCont/src/LogicalSentences/LogicalSentence8:28.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/PropCont/src/LogicalSentences/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/PropCont/src/LogicalSentences/TestLogicalSentence.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/PropCont/src/LogicalSentences/TruthColumn.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/PropCont/src/OLDREADME/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/PropCont/src/OldLogicalSentences/LogicalSentenceWorkingCheck.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/PropCont/src/OldLogicalSentences/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/PropCont/src/PropositionConstant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/PropCont/src/TestPropositionConstant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/PropCont/src/TruthAssignment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/Test/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../IdeaProjects/Test/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IdeaProjects/Test/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../IdeaProjects/Test/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../USACOCamp/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../USACOCamp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/AngryCows.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/Auction$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/Auction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/Beads.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/Beat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/BessieGetsEven.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/BillboardOriginal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/Blocks.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/Bookshelf$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/Bookshelf.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/Bucket.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/ChinaShop.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/ChinaShopBruteShop.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/Coefficients.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/ConvertToDecimal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/Cords.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/Cow1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/CowCord.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/CowMove.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/CowReduction$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/CowReduction$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/CowReduction$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/CowReduction$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/CowReduction$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/CowReduction$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/CowReduction$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/CowReduction$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/CowReduction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/CowRoad.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/CowRun.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/CowSignal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/CrossTheRoad$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/CrossTheRoad.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/Crosswords.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/DigitCount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/Direction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/Echo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/Election$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/Election$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/Election.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/ElectionCow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/FencePaint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/FlowerGarden.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/Friday.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/GenomeCow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/GrassArea.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/HayBaleTrap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/HexToOctal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/Knight.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/Lifeguard$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/Lifeguard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/Lonesome.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/LostCow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/Marathon$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/Marathon.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/MowingTheField.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/NotLast.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/PaintingTheFence$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/PaintingTheFence.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/PerfectCOw.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/Point.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/Position.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/Quadratic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/RPlow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/Roller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/Rollers$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/Rollers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/Song$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/Song.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/StartStop.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/SumTo100.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/Symmetry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/Taming.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/TestX.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/TestY.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/Times17.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/Trapped$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/Trapped.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/buckets.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/crypt1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/square.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/out/production/USACOCamp/wormhole.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../USACOCamp/src/wormhole.java" beforeDir="false" afterPath="$PROJECT_DIR$/../USACOCamp/src/wormhole.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

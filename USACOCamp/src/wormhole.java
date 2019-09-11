@@ -7,18 +7,23 @@ TASK: wormhole
 import java.io.*;
 
 import java.util.Arrays;
-import java.util.HashSet;
 import java.util.Scanner;
-import java.util.Vector;
 
 /**
  * Created by sam on 8/6/19.
  */
-class wormhole {
-    public static void main(String[] args) throws IOException{
+
+public class wormhole {
+    public static int n;
+    public static Point[] Points;
+    public static int result;
+    public static int[] next;
+
+    public static void main(String[] args) throws Exception {
+
         Scanner sc;
         PrintWriter out;
-        boolean debug = true;
+        boolean debug = false;
         if(debug) {
             sc = new Scanner(new FileReader("/Users/samduong/Projects/MakerProjects/USACOCamp/src/wormhole.in"));
             out = new PrintWriter(new FileWriter("/Users/samduong/Projects/MakerProjects/USACOCamp/src/wormhole.out"));
@@ -26,104 +31,99 @@ class wormhole {
             sc = new Scanner(new FileReader("wormhole.in"));
             out = new PrintWriter(new FileWriter("wormhole.out"));
         }
-        int n = sc.nextInt();
-        Vector<Point> points = new Vector<>();
-        for(int i = 0;i<n;i++){
-            points.add(new Point(sc.nextInt(),sc.nextInt(), i));
+        n = sc.nextInt();
+
+        Points = new Point[n];
+        for (int i=0; i<n; i++) {
+            int x = sc.nextInt();
+            int y = sc.nextInt();
+            Points[i] = new Point(x, y);
         }
 
-        Vector<Point[]> pairPoints = new Vector<>();
+        next = new int[n];
+        Arrays.fill(next, -1);
 
-        for(int i = 0;i < n;i++){
-            for(int j = 0;j<n;j++){
-                if(i==j){
+        for (int i=0; i<n; i++)	{
+            int res = -1;
+            for (int j=0; j<n; j++) {
+                if ((i == j || Points[i].y != Points[j].y) || Points[j].x < Points[i].x) {
                     continue;
                 }
-                Point[] pointPair = {points.get(i),points.get(j)};
-                pairPoints.add(pointPair);
-            }
-        }
-        int count = 0;
-        Vector<String> finalSet = new Vector<>();
-        for(int i = 0;i<pairPoints.size();i++){
-            for(int k = 0;k<n;k++){
-                for(int r = 0;r<n;r++) {
-                    if(r==k){
-                        continue;
-                    }
-//                    count++;
-                    if(pairPoints.get(i)[0].x-points.get(k).x > 1 && points.get(r).x-pairPoints.get(i)[1].x>1 && points.get(k).x < pairPoints.get(i)[0].x && points.get(r).x > pairPoints.get(i)[1].x && points.get(k).y == pairPoints.get(i)[0].y && points.get(r).y == pairPoints.get(i)[1].y){
-                        String[] pairArray = {Character.toString((char)(pairPoints.get(i)[0].number+65)), Character.toString((char)(pairPoints.get(i)[1].number+65))};
-//                        Arrays.sort(pairArray);
-                        String[] pairArray2 = {Character.toString((char)(k+65)), Character.toString((char)(r+65))};
-                        Arrays.sort(pairArray2);
-                        String pair = pairArray[0] + pairArray[1];
-                        String setPair = pairArray2[0]+pairArray2[1];
-                        if(!finalSet.contains(pair) && !pair.equals(setPair)){
-                            count++;
 
-                            System.out.println("Pair " + pair + " with " + setPair);
-                            finalSet.add(pair);
-                        }
-//                        if(!finalSet.contains(setPair) && !pair.equals(setPair)){
-//                            count++;
-//
-//                            System.out.println("Pair " + pair + " with " + setPair);
-//                            finalSet.add(setPair);
-//                        }
-                    }
+                if (res == -1 || Points[j].x < Points[res].x) {
+                    res = j;
                 }
             }
+            next[i] = res;
         }
 
-        for(int i = 0;i<n;i++){
-            for(int j = i+1;j<n;j++){
-                if(points.get(i).y == points.get(j).y) {
-                    String[] pairArray = {Character.toString((char) (i + 65)), Character.toString((char) (j + 65))};
-//                    Arrays.sort(pairArray);
-                    String pair = pairArray[0] + pairArray[1];
-                    if(!finalSet.contains(pair)){
-                        count++;
-
-                        System.out.println("Pair " + pair );
-                        finalSet.add(pair);
-                    }
-                }
-            }
-        }
-
-        System.out.println("count " + count);
-        out.println(finalSet.size());
+        out.write(solve()+"\n");
         out.close();
-        int maxRow = Integer.MIN_VALUE;
-        for(int i = 0; i<points.size();i++){
-            if(points.get(i).y>maxRow){
-                maxRow = (int)points.get(i).y;
+    }
+
+    public static int solve() {
+        int[] perm = new int[n];
+        boolean[] used = new boolean[n];
+        return go(perm, used, 0);
+    }
+
+    public static int go(int[] perm, boolean[] used, int k) {
+
+        if (k == n) {
+            return eval(perm);
+        }
+
+        if (k%2 == 0) {
+            int loc = 0;
+            while (used[loc]) loc++;
+            perm[k] = loc;
+            used[loc] = true;
+            int res = go(perm, used, k+1);
+            used[loc] = false;
+            return res;
+        }else {
+            int res = 0;
+            for (int i=perm[k-1]+1; i<n; i++) {
+                if (!used[i]) {
+                    perm[k] = i;
+                    used[i] = true;
+                    res += go(perm, used, k+1);
+                    used[i] = false;
+                }
+            }
+            return res;
+        }
+    }
+
+    public static int eval(int[] perm) {
+        int[] portal = new int[n];
+        for (int i=0; i<n; i+=2) {
+            portal[perm[i]] = perm[i+1];
+            portal[perm[i+1]] = perm[i];
+        }
+        for (int start=0; start<n; start++) {
+            int cur = start;
+            for (int step=0; step<2*n+1; step++) {
+                cur = portal[cur];
+                cur = next[cur];
+
+                if (cur == -1) {
+                    break;
+                }
+            }
+            if (cur != -1) {
+                return 1;
             }
         }
-        System.out.println(maxRow);
-        Vector<Point>[] list = new Vector<Int>[maxRow+1];
-//        Arrays.fill(new Vector<Point>);
-
-        for(int i = 0;i<points.size();i++){
-            list[(int)points.get(i).y].add(points.get(i));
-        }
-
-        for(int i = 0;i<list.length;i++){
-            for(int j = 0;j<list[i].size();j++){
-                System.out.println(list[i].get(j).number);
-            }
-        }
+        return 0;
     }
 }
 
 class Point{
-    int number;
     double x;
     double y;
-    public Point(double x, double y, int number){
+    public Point(double x, double y){
         this.x = x;
         this.y = y;
-        this.number = number;
     }
 }
