@@ -8,23 +8,23 @@ import javax.swing.JFrame;
 
 public class FlagFrame extends JFrame {
     //scale field
-    float scale;
+    private double scale;
 
     //window title bar height offset
     private final int offset = 23;
 
     //proportion fields
-    private long a;
-    private long b;
-    private long d;
+    private int a;
+    private int b;
+    private int d;
 
-    private long k;
-    private long l;
-    private long c;
-    private long e;
-    private long f;;
-    private long g;
-    private long h;
+    private int k;
+    private int l;
+    private int c;
+    private int e;
+    private int f;
+    private int g;
+    private int h;
 
     //coordinate
     private int[] originCords = new int[2];
@@ -32,17 +32,17 @@ public class FlagFrame extends JFrame {
     //sets proportion fields
     public FlagFrame(){
         this.scale = (float)600;
-        a = Math.round(1 * scale)-l/2;
-        b = Math.round(1.9 * scale);
-        d = Math.round(0.76 * scale);
+        a = (int)(1 * scale)-l/2;
+        b = (int)(1.9 * scale);
+        d = (int)(0.76 * scale);
 
-        k = Math.round(0.0616 * scale);
+        k = (int)(0.0616 * scale);
         l = (int)(a/13.0);
         c = 7*l;
-        e = (long)(c/10.0);
-        f = (long)(c/10.0);;
-        g = (long)(d/12.0);
-        h = (long)(d/12.0);
+        e = (int)(c/10.0);
+        f = (int)(c/10.0);;
+        g = (int)(d/12.0);
+        h = (int)(d/12.0);
         init();
     }
 
@@ -64,17 +64,17 @@ public class FlagFrame extends JFrame {
         this.scale = (float)this.getHeight()-offset;
 
         //update proportions again
-        a = Math.round(1 * scale);
-        b = Math.round(1.9 * scale);
-        d = Math.round(0.76 * scale);
+        a = (int)(1 * scale);
+        b = (int)(1.9 * scale);
+        d = (int)(0.76 * scale);
 
-        k = Math.round(0.0616 * scale);
+        k = (int)(0.0616 * scale);
         l = (int)(a/13.0);
         c = 7*l;
-        e = (long)(c/10.0);
-        f = (long)(c/10.0);
-        g = (long)(d/12.0);
-        h = (long)(d/12.0);
+        e = (int)(c/10.0);
+        f = (int)(c/10.0);
+        g = (int)(d/12.0);
+        h = (int)(d/12.0);
 
         //draw methods
         drawStripes(g1);
@@ -89,13 +89,13 @@ public class FlagFrame extends JFrame {
         //draw stripes in constant intervals
         for(int i = 0;i<7;i++){
             g.setColor(Color.RED);
-            g.fillRect(x,y,(int)b,(int)l);
+            g.fillRect(x,y,b,l);
             if(i==0){
                 originCords[0] = x;
                 originCords[1] = y;
             }
             //update position of the next stripe
-            y += (int)l*2;
+            y += l*2;
         }
     }
 
@@ -134,7 +134,7 @@ public class FlagFrame extends JFrame {
     private void drawBlueBox(Graphics g){
         //draw blue box
         g.setColor(Color.BLUE);
-        g.fillRect(originCords[0], originCords[1],(int)d,(int)c);
+        g.fillRect(originCords[0], originCords[1],d,c);
     }
 
     private static Shape createStar(double centerX, double centerY, double innerRadius, double outerRadius){
@@ -142,6 +142,8 @@ public class FlagFrame extends JFrame {
         double startAngleRad = Math.toRadians(-18);
         int numRays = 5;
         double deltaAngleRad = Math.PI / numRays;
+        Double d = new Double(1.0);
+        Math.sin(d);
         //draws 2 lines of the ray of the star
         for (int i = 0; i < numRays * 2; i++){
             double angleRad = startAngleRad + i * deltaAngleRad;

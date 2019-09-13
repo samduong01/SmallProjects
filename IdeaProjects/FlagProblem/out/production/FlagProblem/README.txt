@@ -7,7 +7,7 @@ This program full-fills the specifications by producing an applet or application
 Classes to look at: Main, FlagFrame
 
 How the code works:
-    When the program runs, the program creates an instance of FlagFrame with a default scale of x600 It then sets all the scale
+    When the program runs, the program creates an instance of FlagFrame with a default scale of x600. It then sets all the scale
     constants to their respective values. It then calls paint() which updates the scale to the height of the frame. THen it
     creates a new Graphics2D object by casting the g Graphics object to Graphics2D. This is done so the program can create a star
     using the Graphics2D object. It then draws the stripes by calling drawStripes() which draws 7 red rectangles at equal intervals.
