@@ -1,0 +1,51 @@
+1. a
+    Insertion best case (n), worst case(n^2), average(n^2) - I L O V E A L G O R I T H M S
+                                                             I L O V E A L G O R I T H M S
+                                                             I L O V E A L G O R I T H M S
+                                                             I I L O V A L G O R I T H M S
+                                                             E E I L O V L G O R I T H M S
+                                                             A E I L O O V G O R I T H M S
+                                                             A E I I L L O V O R I T H M S
+                                                             A E G I L L O V V R I T H M S
+                                                             A E G I L L O O V V I T H M S
+                                                             A E G I L L L O O R V T H M S
+                                                             A E G I I L L O O R V V H M S
+                                                             A E G I I I L L O O R T V M S
+                                                             A E G H I I L L O O O R T V S
+                                                             A E G H I I L L M O O R T T V
+                                                             A E G H I I L L M O O R S T V
+    Selection best case (n^2), worst case(n^2), average(n^2) -   A L O V E I L G O R I T H M S
+                                                                 A E O V L I L G O R I T H M S
+                                                                 A E G V L I L O O R I T H M S
+                                                                 A E G H L I L O O R I T V M S
+                                                                 A E G H I L L O O R I T V M S
+                                                                 A E G H I I L O O R L T V M S
+                                                                 A E G H I I L O O R L T V M S
+                                                                 A E G H I I L L O R O T V M S
+                                                                 A E G H I I L L M R O T V O S
+                                                                 A E G H I I L L M O R T V O S
+                                                                 A E G H I I L L M O O T V R S
+                                                                 A E G H I I L L M O O R V T S
+                                                                 A E G H I I L L M O O R S T V
+                                                                 A E G H I I L L M O O R S T V
+                                                                 A E G H I I L L M O O R S T V
+    Bubble best case (n), worst case(n^2), average(n^2) -I L O E A L G O R I T H M S V
+                                                         I L E A L G O O I R H M S T V
+                                                         I E A L G L O I O H M R S T V
+                                                         E A I G L L I O H M O R S T V
+                                                         A E G I L I L H M O O R S T V
+                                                         A E G I I L H L M O O R S T V
+                                                         A E G I I H L L M O O R S T V
+                                                         A E G I H I L L M O O R S T V
+                                                         A E G H I I L L M O O R S T V
+                                                         A E G H I I L L M O O R S T V
+                                                         A E G H I I L L M O O R S T V
+                                                         A E G H I I L L M O O R S T V
+                                                         A E G H I I L L M O O R S T V
+                                                         A E G H I I L L M O O R S T V
+                                                         A E G H I I L L M O O R S T V
+   b. Shell sort -  E A S Q S E E L I O N R T Y U H S T L S O
+                    E A L I O E E S L S H R T Q S N S T Y U O
+                    E A E E H I L N L Q O R O S S S S T T U Y
+                    A E E E H I L L N O O Q R S S S S T T U Y
+                    A E E E H I L L N O O Q R S S S S T T U Y

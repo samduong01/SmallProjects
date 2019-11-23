@@ -2,16 +2,15 @@
  * Created by sam on 7/21/17.
  */
 public class Board {
-    String user1 = "X";
-    String user2 = "O";
+    private String user1 = "X";
+    private String user2 = "O";
 
     private String[][] board = {{" ", " ", " "}, {" ", " ", " "}, {" ", " ", " "}};
-    boolean threeInARow = false;
-    boolean threeInWin = false;
+    private int[][] cords = {{10,10},{10,10}};
+    private int[][] fillCords = {{10,10}};
 
-    public Board() {
-
-    }
+    private boolean threeInARow = false;
+    private boolean threeInWin = false;
 
     public int printBoard() {
         System.out.println("    X →  ");
@@ -28,10 +27,8 @@ public class Board {
             return false;
         }
         if (turnIn % 2 == 0) {
-
             board[yIn][xIn] = user1;
         } else {
-
             board[yIn][xIn] = user2;
         }
         return true;
@@ -50,8 +47,8 @@ public class Board {
         if ((board[2][0] == user1 && board[2][1] == user1 && board[2][2] == user1) || (board[2][0] == user2 && board[2][1] == user2 && board[2][2] == user2)) {
             threeInARow = true;
         }
-        //vertical
 
+        //vertical
         if ((board[0][0] == user1 && board[1][0] == user1 && board[2][0] == user1) || (board[0][0] == user2 && board[1][0] == user2 && board[2][0] == user2)) {
             threeInARow = true;
         }
@@ -65,7 +62,6 @@ public class Board {
         }
 
         //diagonals
-
         if ((board[0][0] == user1 && board[1][1] == user1 && board[2][2] == user1) || (board[0][0] == user2 && board[1][1] == user2 && board[2][2] == user2)) {
             threeInARow = true;
         }
@@ -119,8 +115,7 @@ public class Board {
 
         return threeInWin;
     }
-    int[][] cords = {{10,10},{10,10}};
-    int[][] fillCords = {{10,10}};
+
     //figures out if there is 2 in a row
     public boolean horizontal(String type){
         int count = 0;
@@ -129,11 +124,8 @@ public class Board {
                 if (count == 0 && board[i][j].equals(type)) {
                     cords[0][0] = i;
                     cords[0][1] = j;
-
                     count++;
                 }else if (count == 1 && board[i][j].equals(type)) {
-
-
                     cords[1][0] = i;
                     cords[1][1] = j;
                     if(cords[1][1] - cords[0][1] == 2){
@@ -144,10 +136,9 @@ public class Board {
                         fillCords[0][1] = 0;
                     }else{
                         fillCords[0][0] = cords[1][0];
-                        fillCords[0][1] = cords[1][1] +1;
+                        fillCords[0][1] = cords[1][1]+1;
                     }
                     if(board[fillCords[0][0]][fillCords[0][1]].equals(" ")) {
-
                         return true;
                     }else{
                         fillCords[0][0] = 10;
@@ -171,29 +162,23 @@ public class Board {
                     cords[0][1] = j;
                     count++;
                 } else if (count == 1 && board[j][i].equals(type)) {
-
                     cords[1][0] = i;
                     cords[1][1] = j;
                     if (cords[1][1] - cords[0][1] == 2) {
-
                         fillCords[0][1] = cords[1][0];
                         fillCords[0][0] = 1;
-                    } else if (cords[1][1] == 2 && cords[0][1] == 1) {
-
+                    }else if(cords[1][1] == 2 && cords[0][1] == 1) {
                         fillCords[0][1] = cords[0][0];
                         fillCords[0][0] = 0;
-                    } else {
+                    }else{
                         fillCords[0][1] = cords[1][0];
                         fillCords[0][0] = 2;
-
                     }
 
                     if(board[fillCords[0][0]][fillCords[0][1]].equals(" ")) {
                         System.out.println(" " + fillCords[0][0] + " " + fillCords[0][1]);
-
                         return true;
                     }else{
-
                         fillCords[0][0] = 10;
                         fillCords[0][1] = 10;
                         return false;
@@ -206,19 +191,18 @@ public class Board {
         }
         return false;
     }
-    public boolean diagonals(String type) {
+    public boolean diagonals(String type){
         int count = 0;
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[0].length; j++) {
-                if (count == 0 && board[i][j].equals(type)&& i == j) {
+                if (count == 0 && board[i][j].equals(type)&& i == j){
                     cords[0][0] = i;
                     cords[0][1] = j;
                     count++;
-                } else if (count == 1 && board[i][j].equals(type)&& i == j) {
-
+                } else if (count == 1 && board[i][j].equals(type)&& i == j){
                     cords[1][0] = i;
                     cords[1][1] = j;
-                    if (cords[1][1] - cords[0][1] == 2 && cords[1][0] - cords[0][0] == 2) {
+                    if (cords[1][1] - cords[0][1] == 2 && cords[1][0] - cords[0][0] == 2){
                         fillCords[0][0] = 1;
                         fillCords[0][1] = 1;
                     } else if (cords[1][1] == 2) {
@@ -253,7 +237,6 @@ public class Board {
                     cords[0][1] = j;
                     count++;
                 } else if (count == 1 && board[i][j].equals(type)&& ((i == 0 && j == 2) || (i == 1 && j == 1) || (i == 2 && j == 0))) {
-
                     cords[1][0] = i;
                     cords[1][1] = j;
                     if (cords[1][1] - cords[0][1] == 2 && cords[1][0] - cords[0][0] == 2) {
@@ -268,7 +251,6 @@ public class Board {
                     }
 
                     if(board[fillCords[0][0]][fillCords[0][1]].equals(" ")) {
-
                         return true;
                     }else{
                         fillCords[0][0] = 10;
@@ -282,7 +264,6 @@ public class Board {
         return false;
     }
     public boolean twoInARow(String type){
-
         horizontal(type);
         if(!horizontal(type)) {
             vertical(type);
@@ -319,7 +300,6 @@ public class Board {
                 if(((i == 0 && j == 0)||(i == 0 && j == 2)||(i == 2 && j == 0)||(i == 2 && j == 2)) && board[i][j].equals("X") ){
                     fillCords[0][0] = 1;
                     fillCords[0][1] = 1;
-
                     if(board[fillCords[0][0]][fillCords[0][1]].equals(" ")){
                         return true;
                     }
@@ -336,7 +316,6 @@ public class Board {
                 if(((i == 0 && j == 1)||(i == 1 && j == 0)||(i == 2 && j == 1)||(i == 1 && j == 2)) && board[i][j].equals(" ") ){
                     fillCords[0][0] = i;
                     fillCords[0][1] =j;
-
                     return true;
                 }
             }
@@ -364,7 +343,6 @@ public class Board {
         }
 
         if(fillCords[0][0] == 10 || fillCords[0][1] == 10 || cords[0][0] == 10 || cords[1][0] == 10){
-
             if(doubleProng()){
                 doubleProng();
             }else if(cornerCase()){

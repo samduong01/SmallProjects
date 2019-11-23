@@ -8,7 +8,7 @@ import javax.swing.JFrame;
 
 public class FlagFrame extends JFrame {
     //scale field
-    double scale;
+    private double scale;
 
     //window title bar height offset
     private final int offset = 23;
@@ -41,6 +41,7 @@ public class FlagFrame extends JFrame {
         c = 7*l;
         e = (int)(c/10.0);
         f = (int)(c/10.0);
+
         g = (int)(d/12.0);
         h = (int)(d/12.0);
         init();
@@ -153,6 +154,8 @@ public class FlagFrame extends JFrame {
         double startAngleRad = Math.toRadians(-18);
         int numRays = 5;
         double deltaAngleRad = Math.PI / numRays;
+        Double d = new Double(1.0);
+        Math.sin(d);
         //draws 2 lines of the ray of the star
         for (int i = 0; i < numRays * 2; i++){
             double angleRad = startAngleRad + i * deltaAngleRad;

@@ -1,0 +1,5 @@
+Parts:
+    Draw Star Method - Status: Done
+    Draw Stripes Method - Status: Done
+    Scale flag based on window height - Status: Done
+    Draw Blue Box Method - Status: Done
